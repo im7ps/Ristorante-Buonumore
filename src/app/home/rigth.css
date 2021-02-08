@@ -1,0 +1,53 @@
+/* The invisible sidebar menu */
+
+
+
+.sidedestra{
+    height: 100%;
+    width: 45%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color:whitesmoke;
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: .35s;
+    margin-top: 70px;
+   
+  }
+  
+  .hiddenr{
+    right: -45% !important;
+  }
+  
+  /* The navigation menu links */
+  
+  
+  .sidedestra a {
+    
+    text-align: left ;
+    padding-top: 50px;
+    padding-left: 260px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    text-transform: uppercase;
+  
+  }
+ 
+  
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidedestra a:hover {
+    color: black;
+  }
+  
+  /* SIDENAV ACTIVE */
+
+  #scontrino{
+      margin-top: 100px;
+  }
+
+  

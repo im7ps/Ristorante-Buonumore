@@ -1,0 +1,17 @@
+<app-menu-order (scontrino-data)="scontrinoDetail()"></app-menu-order>
+
+
+  <h3>{{title}}</h3>
+  <table *ngFor="let scontrinoElem of scontrinolist" [ngStyle]="{'background-color':getColor(scontrinoElem.value), 'font-size.px':16}">
+    <tr>
+      <th>Nome</th>
+      <td>{{scontrinoElem.name}}</td>
+      <button type="button" class="btn btn-danger btn-sm" (click)="removeIngredient(scontrinoElem)">Rimuovi</button>
+    </tr>
+
+    <tr>
+      <th>Costo</th>
+      <td>{{scontrinoElem.value}}</td>
+    </tr>
+  </table>
+

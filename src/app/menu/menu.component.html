@@ -1,0 +1,47 @@
+<table>
+
+  <th>
+    <tr *ngFor="let panetype of panelist">
+    <td>{{panetype.name}}, {{panetype.value}}</td>
+    <button class='btn btn-primary btn-sm' (click)="addIngrediente(panetype)">Aggiungi</button>
+    </tr>
+  </th>
+
+  <th>
+    <tr *ngFor="let carnetype of carnelist">
+      <td>{{carnetype.name}}, {{carnetype.value}}</td>
+      <button type="button" class="btn btn-primary btn-sm" (click)="addIngrediente(carnetype)">Aggiungi</button>
+    </tr>
+
+  </th>
+
+    <th>
+      <tr *ngFor="let verduretype of verdurelist">
+        <td>{{verduretype.name}}, {{verduretype.value}}</td>
+        <button type="button" class="btn btn-primary btn-sm" (click)="addIngrediente(verduretype)">Aggiungi</button>
+
+      </tr>
+
+    </th>
+
+    <th>
+      <tr *ngFor="let formaggitype of formaggilist">
+        <td>{{formaggitype.name}}, {{formaggitype.value}}</td>
+        <button type="button" class="btn btn-primary btn-sm" (click)="addIngrediente(formaggitype)">Aggiungi</button>
+
+      </tr>
+
+    </th>
+
+    <th>
+      <tr *ngFor="let salsetype of salselist">
+        <td>{{salsetype.name}}, {{salsetype.value}}</td>
+        <button type="button" class="btn btn-primary btn-sm" (click)="addIngrediente(salsetype)">Aggiungi</button>
+
+      </tr>
+
+    </th>
+  <div *ngIf="continue5">
+    <button class='btn btn-danger btn-sm'(click)="confirmScontrino()">Conferma e prosegui</button>
+  </div>
+</table>

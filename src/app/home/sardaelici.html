@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css"/>
+    <title>Page Title</title>
+
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+    />
+
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Romanesco&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sarda.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="rigth.css">
+    <link rel="stylesheet" href="Button-header.css">
+    <link rel="stylesheet" href="Button-text.css">
+    <link rel="stylesheet" href="Button-header.css">
+    <title>Document</title>
+</head>
+<body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+<header class="header">
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+
+
+        <!--sidebarleft-->
+        <div class="sidenav hidden" id="sidebar-left" >
+            <nav>
+              <ul class="nav-item activeo">
+
+                  <li class="nav-homr"  routerLink="home">Home</li> <!--href="#" se si vuole che il link rimandi alla parte sueperiore della painga (top)-->
+
+                  <li class="nav-menu"  routerLink="menu">Menu</li> <!--href="#" se si vuole che il link rimandi alla parte sueperiore della painga (top)-->
+
+                  <li class="nav-maps" routerLink="maps">Apri google maps</li>
+
+                  <li class="nav-qrcode" routerLink="qrcode">Apri codice qr</li>
+
+                  <li class="nav-validation" routerLink="registration">Registrati</li>
+
+                  <li class="nav-validation" routerLink="login">Login</li>
+
+              </ul>
+              </nav>
+        </div>
+        <!--siderigth-->
+        <div class="sidedestra hiddenr" id="sidebar-right">
+            <div class="container-fluid">
+                <app-order-detail></app-order-detail>
+            </div>
+            <div class="btntext">
+                <div class="buttons-coll">
+                    <button class="custom-btn btn-3"><span>Acquista</span></button>
+                </div>
+            </div>
+        </div>
+        <div id="menu" class="col-4">
+            <div class="container" (click)="menu();test()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+        </div>
+        <div id="logo" class="col-4">
+            <h1>LOGO</h1>
+        </div>
+        <div id="info" class="col-4">
+            <div class="container">
+                <button  class="custom-btn btn-14" (click)="animation()">ORDINA</button>
+                </div>
+        </div>
+    </nav>
+</header>
+
+
+
+
+
+
+<!--sezioneimmaginietesto-->
+<div class="container-fluid" id="boss-page">
+    <div class="section"   id="first-section">
+        <div class="row" >
+            <img src="https://images.pexels.com/photos/260922/pexels-photo-260922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+        </div>
+        <!--fullscreenimg-->
+    </div>
+    <div class="section" id="second-section">
+        <div class="row" style="background-color:#f9f6f6">
+            <div class="col-6 p-0 align-self-center" data-aos="fade-up">  <!--testo-->
+                <h1 id="title" class="text-center">LOREM IPSUM</h1>
+                <p id="description" class="text-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                    iure ab aspernatur consequatur alias.<br>
+                    Veritatis repudiandae illo, soluta architecto a rerum saepe officia fugiat culpa, rem suscipit ratione
+                    non sed? <br>ellat amet nam sequi! Minus, expedita debitis!</p>
+                <div class="btntext">
+                    <div class="buttons-coll">
+                        <button class="custom-btn btn-3"><span>MORE INFO</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 p-0"> <!--immagine-->
+                <img id="img"
+                     src="https://images.unsplash.com/photo-1517407256858-972c0f3ebef2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzB8fGhhbWJ1cmdlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                     class="w-100" alt="Responsive-image" style="max-height: 100vh;">
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="row" style="background-color:#f9f6f6">
+            <div class="col-6 p-0">  <!--immagine-->
+                <img id="img"
+                     src="https://images.unsplash.com/photo-1517407256858-972c0f3ebef2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzB8fGhhbWJ1cmdlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                     class="w-100" alt="Responsive-image" style="max-height: 100vh;">
+            </div>
+            <div class="col-6 p-0 align-self-center" data-aos="fade-up"> <!--testo-->
+                <h1 id="title" class="text-center">LOREMF IPSUM</h1>
+                <p id="description" class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iure
+                    ab aspernatur consequatur alias.<br>
+                    Veritatis repudiandae illo, soluta architecto a rerum saepe officia fugiat culpa, rem suscipit ratione
+                    non sed? <br>ellat amet nam sequi! Minus, expedita debitis!</p>
+                <div class="btntext">
+                    <div class="buttons-coll">
+                        <button class="custom-btn btn-3"><span>MORE INFO</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="row" style="background-color:#f9f6f6">
+            <div class="col-6 p-0 align-self-center" data-aos="fade-up">  <!--testo-->
+                <h1 id="title" class="text-center">LOREM IPSUM</h1>
+                <p id="description" class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem iure
+                    ab aspernatur consequatur alias.<br>
+                    Veritatis repudiandae illo, soluta architecto a rerum saepe officia fugiat culpa, rem suscipit ratione
+                    non sed? <br>ellat amet nam sequi! Minus, expedita debitis!</p>
+                <div class="btntext">
+                    <div class="buttons-coll">
+                        <button class="custom-btn btn-3"><span>MORE INFO</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 p-0"> <!--immagine-->
+                <img id="img"
+                     src="https://images.unsplash.com/photo-1517407256858-972c0f3ebef2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzB8fGhhbWJ1cmdlcnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                     class="w-100" alt="Responsive-image" style="max-height: 100vh;">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <div class="row" >
+            <div class="col-4 p-0">
+                <img src="https://images.pexels.com/photos/1115600/pexels-photo-1115600.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                     class="w-100" alt="Responsive-image" style="max-height: 100vh;object-fit: cover;">
+            </div>
+            <div class="col-4 p-0">
+                <img src="https://images.pexels.com/photos/1568342/pexels-photo-1568342.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                     class="w-100" alt="Responsive-image" style="max-height: 100vh;object-fit: cover;">
+            </div>
+            <div class="col-4 p-0">
+                <img src="https://images.pexels.com/photos/1414234/pexels-photo-1414234.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                     class="w-100" alt="Responsive-image" style="max-height: 100vh;object-fit: cover;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4 p-0">
+                <img src="https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                     class="w-100" alt="Responsive-image" style="max-height: 100vh;object-fit: cover;">
+                <div class="centered">
+                    <div class="btntext">
+                        <div class="buttons-coll">
+                            <button class="custom-btn btn-14"><span>MORE INFO</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-4 p-0">
+                <img src="https://images.pexels.com/photos/6058327/pexels-photo-6058327.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                     class="w-100" alt="Responsive-image" style="max-height: 100vh;object-fit: cover;">
+                <div class="centered">
+                    <div class="btntext">
+                        <div class="buttons-coll">
+                            <button class="custom-btn btn-14"><span>MORE INFO</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 p-0 align-self-stretch">
+                <img src="https://media.istockphoto.com/photos/nashville-map-tennessee-usa-picture-id186871947"
+                     class="w-100" alt="Responsive-image" style="max-height: 100vh;object-fit: cover;">
+                <div class="centered">
+                    <div class="btntext">
+                        <form>
+                            <button class="custom-btn btn-14"
+                                    formaction="https://www.google.com/maps/place/Museo+Archeologico+Nazionale+di+Reggio+Calabria/@38.1178545,15.6629252,13z/data=!4m13!1m7!3m6!1s0x1314509749ea2095:0xc75d133d1e9c3e22!2sReggio+Calabria+RC!3b1!8m2!3d38.1113006!4d15.6472914!3m4!1s0x1314508ddc6b5f23:0x378048dacd690d12!8m2!3d38.114638!4d15.6510866?">
+                                WE ARE HERE
+                            </button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"
+></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.js" integrity="sha512-eH2N2Zt2AeLuFlFvRSEeZcVeAESY+8nfIqhxx0XXEou6w/G4lLY3K8UKNYqi6e1pLXDduVF1KF/lbyxy3+X6OA==" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!--animazione-->
+<script>
+    new fullpage('#boss-page', {
+            afterRender: AOS.init(),
+            slidesNavigation: true,
+            controlArrows: false,
+            onLeave: function (event) {
+                $('.section [data-aos]').each(function () {
+                    $(this).removeClass("aos-animate")
+                });
+
+                console.log(event);
+                setTimeout(() => {
+                    const sectionId = event.item.id;
+                    const classNavbar = $('.navbar').className;
+
+                    const firstSection = document.getElementById('first-section');
+                    if (sectionId === 'first-section') {
+                        $('.navbar').addClass('active');
+                    } else if (firstSection.className.includes('active')) {
+                        $('.navbar').removeClass('active');
+                    }
+                }, 250);
+
+            },
+            onSlideLeave: function () {
+                $('.slide [data-aos]').each(function () {
+                    $(this).removeClass("aos-animate")
+                });
+            },
+            afterSlideLoad: function (event) {
+                $('.slide.active [data-aos]').each(function () {
+                    $(this).addClass("aos-animate")
+                });
+                console.log(event);
+
+            },
+            afterLoad: function () {
+                $('.section.active [data-aos]').each(function () {
+                    $(this).addClass("aos-animate")
+                });
+            }
+        });
+
+    $('[data-aos]').each(function(){ $(this).addClass("aos-init"); })
+
+
+</script>
+
+<script src="lici.js"></script>
+<script src="animation.js">
+
+
+
+</script>
+
+
+</html>
